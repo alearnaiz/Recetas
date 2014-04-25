@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="recipesApp">
+<head>
+<meta charset="utf-8">
+
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/jquery.mobile-1.4.2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css">
+
+<script src="js/angular.min.js"></script> 
+<script src="js/controllers.js"></script> 
+
+<script src="js/recipe.js"></script>
+
+<title>Bievenido a tus recetas</title>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Bievenido a tus recetas</h1>
+		</div>
+		<div data-role="main">
+			<a data-role="button" href="#recipes">Ver tus recetas</a>
+			<a data-role="button" href="#addRecipe">Crear receta</a>
+		</div>
+		<div data-role="footer">
+			<h1>Arnaiz Company</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="recipes" ng-controller="recipesCtrl">
+		<div data-role="header">
+			<h1>Tus recetas</h1>
+		</div>
+		<div data-role="main">
+			<ul data-role="listview" id="list">
+				<li ng-repeat="recipe in recipes">
+					<h2>{{recipe.name}}</h2>
+					<h2>Ingredientes:</h2> {{recipe.ingredients}}
+					<h2>Tiempo total:</h2> {{recipe.totalTime}} minutos
+					<a data-role='button' ng-click="alertSteps(recipe.steps)">Ver los pasos</a>
+				</li>
+			</ul>
+		</div>
+		<div data-role="footer">
+			<h1>Arnaiz Company</h1>
+		</div>
+		<script src="js/recipes.js"></script>
+	</div>
+	
+	<div data-role="page" id="addRecipe" ng-controller="addRecipeCtrl">
+		<div data-role="header">
+			<h1>Crear receta</h1>
+		</div>
+		<div data-role="main">
+			<form ng-submit="createRecipe()">
+				<h2>Nombre:</h2>
+				<input type="text" ng-model="data.name"/>
+				<h2>Ingredientes (Separar por coma):</h2>
+				<input type="text" ng-model="data.ingredients"/>
+				<h2>Tiempo total (minutos):</h2>
+				<input type="number" ng-model="data.totalTime"/>
+				<h2>Pasos:</h2>
+				<textarea ng-model="data.steps"></textarea>
+				<input type="submit" value="Crear">
+			</form>
+		</div>
+		<div data-role="footer">
+			<h1>Arnaiz Company</h1>
+		</div>
+		<script src="js/addRecipe.js"></script>
+	</div>
+</body>
+</html>
