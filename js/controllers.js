@@ -28,7 +28,7 @@ recipesApp.controller('recipesCtrl', function($scope){
 	
 	$scope.newRecipe = function(recipe){
 		if (!$scope.recipes){
-			$scope.recipes = new Array();
+			$scope.recipes = [];
 		}
 		recipe.ingredients = transformIngredients(recipe);
 		$scope.recipes.push(recipe);
