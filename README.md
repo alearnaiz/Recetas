@@ -11,7 +11,7 @@ Screenshots
 ===========
 *Página index*
 
-![Alt text](https://github.com/alearnaiz/Recetas/blob/master/screenshots/index.png "Índice")
+![Alt text](/blob/master/screenshots/index.png "Índice")
 
 *Página de ver tus recetas*
 
