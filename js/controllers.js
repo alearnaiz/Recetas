@@ -45,10 +45,10 @@ recipesApp.controller('recipesCtrl', function($scope){
 
 recipesApp.controller('addRecipeCtrl', function($scope){
 	$scope.data = {
-			'name': '',
-			'ingredients': '',
-			'totalTime': '',
-			'steps': ''
+			name: '',
+			ingredients: '',
+			totalTime: '',
+			steps: ''
 	};
 	
 	$scope.createRecipe = function(){
