@@ -11,7 +11,7 @@ Screenshots
 ===========
 *Página index*
 
-![Alt text](/blob/master/screenshots/index.png "Índice")
+![Alt text](screenshots/index.png "Índice")
 
 *Página de ver tus recetas*
 
